@@ -10,7 +10,9 @@ const translations = {
     contactTitle: 'Contact',
     email: 'Email',
     phone: 'Phone',
-    linkedin: 'LinkedIn'
+    linkedin: 'LinkedIn',
+    telegram: 'Telegram',
+    contactMessage: 'Contact me directly for all the necessary services, portfolio or references.'
   },
   ru: {
     tagline: 'Консалтинг в сфере финансов, медиа и анализа данных',
@@ -23,7 +25,9 @@ const translations = {
     contactTitle: 'Контакты',
     email: 'Эл. почта',
     phone: 'Телефон',
-    linkedin: 'Линкедин'
+    linkedin: 'Линкедин',
+    telegram: 'Телеграм',
+    contactMessage: 'Свяжитесь со мной напрямую для всех необходимых услуг, портфолио или рекомендаций.'
   },
   es: {
     tagline: 'Consultoría de finanzas, medios y análisis de datos',
@@ -36,7 +40,9 @@ const translations = {
     contactTitle: 'Contacto',
     email: 'Correo electrónico',
     phone: 'Teléfono',
-    linkedin: 'LinkedIn'
+    linkedin: 'LinkedIn',
+    telegram: 'Telegram',
+    contactMessage: 'Contácteme directamente para todos los servicios necesarios, portafolio o referencias.'
   }
 };
 
@@ -55,10 +61,15 @@ function setLang(lang) {
   document.getElementById('email-label').textContent = t.email;
   document.getElementById('phone-label').textContent = t.phone;
   document.getElementById('linkedin-label').textContent = t.linkedin;
+  document.getElementById('telegram-label').textContent = t.telegram;
+  document.getElementById('contact-message').textContent = t.contactMessage;
 }
 
-document.getElementById('language-selector').addEventListener('change', function() {
-  setLang(this.value);
+document.querySelectorAll('.language-links a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    setLang(link.dataset.lang);
+  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
