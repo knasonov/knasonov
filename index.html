@@ -8,23 +8,30 @@
 </head>
 <body>
   <header>
+    <img src="logo.jpg" alt="Logo" class="logo">
     <img src="photo_official.jpg" alt="Konstantin Nasonov" class="profile-photo">
     <h1>Konstantin Nasonov</h1>
-    <p>Financial, Media & Data Analytics Consulting</p>
+    <p id="tagline">Financial, Media & Data Analytics Consulting</p>
+    <select id="language-selector">
+      <option value="en">English</option>
+      <option value="ru">Русский</option>
+      <option value="es">Español</option>
+    </select>
   </header>
   <section>
-    <h2>Services</h2>
-    <ul>
+    <h2 id="services-title">Services</h2>
+    <ul id="services-list">
       <li>Financial modeling and quantitative analysis</li>
       <li>Media and entertainment strategy development</li>
       <li>Data analytics and AI-driven solutions</li>
     </ul>
   </section>
   <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:knasonov@gmail.com">knasonov@gmail.com</a></p>
-    <p>Phone: +34 626 312 237</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/konstantin-nasonov/">in/konstantin-nasonov</a></p>
+    <h2 id="contact-title">Contact</h2>
+    <p><span class="icon">📧</span><span id="email-label">Email</span>: <a id="email-link" href="mailto:knasonov@gmail.com">knasonov@gmail.com</a></p>
+    <p><span class="icon">📞</span><span id="phone-label">Phone</span>: <span id="phone-number">+34 626 312 237</span></p>
+    <p><span class="icon">🔗</span><span id="linkedin-label">LinkedIn</span>: <a id="linkedin-link" href="https://www.linkedin.com/in/konstantin-nasonov/">in/konstantin-nasonov</a></p>
   </section>
+  <script src="script.js"></script>
 </body>
 </html>
