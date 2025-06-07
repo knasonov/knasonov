@@ -16,8 +16,9 @@ header {
 }
 
 .profile-photo {
-  height: 250px;
-  width: auto;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   border-radius: 50%;
   display: block;
   margin: 0 auto 20px;
